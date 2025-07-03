@@ -305,6 +305,22 @@ function girar() {
       });
     }
   </script>
+<script>
+  // Mover al siguiente campo con Enter
+  document.getElementById("tituloSorteo").addEventListener("keydown", function (e) {
+    if (e.key === "Enter" && this.value.trim() !== "") {
+      e.preventDefault();
+      document.getElementById("nombreCreador").focus();
+    }
+  });
 
+  // Activar botón iniciar con Enter
+  document.getElementById("nombreCreador").addEventListener("keydown", function (e) {
+    if (e.key === "Enter" && this.value.trim() !== "") {
+      e.preventDefault();
+      iniciarRuleta();
+    }
+  });
+</script>
 </body>
 </html>
